@@ -97,7 +97,7 @@
 #pgsz-option .pgsz-option-table {font-family: 'Poppins',sans-serif;border-collapse: collapse !important;}
 #pgsz-option .pgsz-option-table tr.titre td .titre {color: var(--main-bg-dark);font-weight: 700;}
 #pgsz-option .pgsz-option-table tr.titre td .titre::before {display: inline-block;content: "";height: 14px;width: 2px;background: var(--main-colorful-color);margin-bottom: -1px;margin-right: 8px;}
-#pgsz-option .pgsz-option-table tr.pgsz-optiontable-coltitle th {font-family: 'Poppins',sans-serif;color: var(--main-bg-dark);font-weight: 600;background: var(--main-bg-lightgrey);}
+#pgsz-option .pgsz-option-table tr.pgsz-optiontable-coltitle th {font-family: 'Poppins',sans-serif;color: var(--main-bg-dark);font-weight: 600;background: var(--main-bg-lightgrey);border-top: 1px solid #e0e0e0 !important;border-bottom: 1px solid var(--main-bg-dark);padding-top: 12px;padding-bottom: 12px;}
 
 #pgsz-option .pgsz-option-table tr.pgsz-optiontable-tr td {font-family: 'Poppins',sans-serif;color: var(--main-bg-dark);padding: 9px 8px;}
 #pgsz-option .pgsz-option-table tr.pgsz-optiontable-tr td.pgsz-optiontable-fieldname {font-weight: 500 !important;}
@@ -146,8 +146,9 @@
 
 /* THEME MD */
 #pgsz-option.pgsz-theme-md .pgsz-option-table tr.pgsz-optiontable-coltitle th {border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
-#pgsz-option.pgsz-theme-md .noborder > tbody > tr:nth-child(odd):not(.liste_titre) {background: transparent;}
+/*#pgsz-option.pgsz-theme-md .noborder > tbody > tr:nth-child(odd):not(.liste_titre) {background: transparent;}*/
 #pgsz-option.pgsz-theme-md .noborder tr.titre td {border-left: 1px solid #fff;border-right: 1px solid #fff;border-bottom: none;}
+#pgsz-option.pgsz-theme-md .noborder tr {border-left: none;border-right: none;}
 
 /***/
 /*
