@@ -74,7 +74,16 @@ function progiseize_listModulesInstance(){
 
 						// ON VERIFIE SI IL Y A BESOIN D'UNE MAJ
 						$need_update = false;
-						if(floatval($last_version) > floatval($mod->version)): $need_update = true; endif;
+
+						$version_local = explode('.',$mod->version);
+						$version_online = explode('.', $last_version);
+						for ($i=0; $i < 3; $i++): 
+							$vl = ($version_local[$i])?$version_local[$i]:0;
+							$vo = ($version_online[$i])?$version_online[$i]:0;
+							if($vl < $vo): $need_update = true; break; elseif($vl > $vo): break; endif;
+						endfor; 
+
+						//if(floatval($last_version) > floatval($mod->version)): $need_update = true; endif;
 
 						$pgszMod = array(
 							'class' => $modName,
