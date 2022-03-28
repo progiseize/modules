@@ -67,7 +67,7 @@ class modProgiseize extends DolibarrModules
         $this->editor_url = 'https://www.progiseize.fr';
         
         // Possible values for version are: 'development', 'experimental', 'dolibarr', 'dolibarr_deprecated' or a version string like 'x.y.z'
-        $this->version = '1.2.1';
+        $this->version = '1.2.2';
         // Key used in llx_const table to save module status enabled/disabled (where MYMODULE is value of property name of module in uppercase)
         $this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
         // Name of image file used for this module.
@@ -229,6 +229,16 @@ class modProgiseize extends DolibarrModules
             'perms'=>'$user->rights->progiseize->configurer',           // Use 'perms'=>'$user->rights->monmodule->level1->level2' if you want your menu with a permission rules
             'target'=>'',
             'user'=>2);             // 0=Menu for internal users, 1=external users, 2=both
+        $r++;
+
+        //https://dolibarr.progiseize.fr/public/ticket/index.php
+        $this->menu[$r]=array( 
+            'fk_menu'=>'fk_mainmenu=progiseize',
+            'type'=>'left',
+            'titre'=> 'Assistance',
+            'mainmenu'=>'progiseize',
+            'leftmenu'=> $this->rights_class,
+            'url'=>'https://dolibarr.progiseize.fr/public/ticket/index.php', 'langs'=>'progiseize@progiseize', 'position'=> $this->module_position, 'enabled'=>'1', 'perms'=>'1','target'=>'_blank', 'user'=>2);
         $r++;
 
         // Example to declare a Left Menu entry into an existing Top menu entry:

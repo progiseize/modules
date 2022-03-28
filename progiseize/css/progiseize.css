@@ -48,7 +48,7 @@
 /* LISTE DES MODULES */
 .pgsz-flex-wrapper .pgsz-mod-item {background: #fff;box-shadow: 0 3px 6px rgba(0, 0, 0, 0.07);}
 .pgsz-flex-wrapper .pgsz-mod-item .pgsz-mod-item-view {background: #ccc;position: relative;width: 100%;background: url('../img/modEmpty_view.jpg') center no-repeat;background-size: cover;}
-.pgsz-flex-wrapper .pgsz-mod-item .pgsz-mod-item-view:before {content: "";padding-top: 40%;display: block;}
+.pgsz-flex-wrapper .pgsz-mod-item .pgsz-mod-item-view:before {content: "";padding-top: 50%;display: block;}
 .pgsz-flex-wrapper .pgsz-mod-item .pgsz-mod-item-view.statut-on {border-bottom: 5px solid var(--main-green-color);}
 .pgsz-flex-wrapper .pgsz-mod-item .pgsz-mod-item-view.statut-off {border-bottom: 5px solid var(--main-colorful-color);}
 .pgsz-flex-wrapper .pgsz-mod-item .pgsz-mod-item-title {margin: 0;padding: 16px 16px 8px 16px;font-family: 'Poppins',sans-serif;color: var(--main-bg-dark);}
@@ -79,6 +79,7 @@
 .pgsz-flex-wrapper .pgsz-mod-item .pgsz-mod-item-view.view-modGenRapports {background: url('../img/modGenRapports_view.jpg') center no-repeat;background-size: cover;}
 .pgsz-flex-wrapper .pgsz-mod-item .pgsz-mod-item-view.view-modLoginPlus {background: url('../img/modLoginPlus_view.jpg') center no-repeat;background-size: cover;}
 .pgsz-flex-wrapper .pgsz-mod-item .pgsz-mod-item-view.view-modTicketPlus {background: url('../img/modTicketPlus_view.jpg') center no-repeat;background-size: cover;}
+.pgsz-flex-wrapper .pgsz-mod-item .pgsz-mod-item-view.view-modGestionParc {background: url('../img/modGestionParc_view.jpg') center no-repeat;background-size: cover;}
 
 .pgsz-flex-wrapper .pgsz-mod-item .pgsz-mod-item-toolslist li a[disabled] {pointer-events: none;opacity: 0.5;}
 
@@ -119,8 +120,11 @@
 #pgsz-option .pgsz-button-submit {background: var(--main-bg-dark) !important;color: #fff !important;border: none;border-radius: 3px;cursor: pointer;font-family: 'Poppins', sans-serif;font-weight: 600;}
 #pgsz-option .pgsz-button-submit:hover {background: #000 !important;}
 
-#pgsz-option .pgsz-button-small {background: var(--main-bg-dark);font-family: 'Poppins', sans-serif;color: #fff;font-size: 12px;border: none !important;outline: none;border-radius: 2px;font-weight: 600;}
+#pgsz-option .pgsz-button-small {background: var(--main-bg-dark);font-family: 'Poppins', sans-serif;color: #fff;font-size: 12px;border: none !important;outline: none;border-radius: 2px;font-weight: 600;cursor: pointer;}
 #pgsz-option .pgsz-button-small:hover {background: var(--main-colorful-hover);border: none;border: none !important;outline: none;}
+
+#pgsz-option .pgsz-button-small.alt {background: var(--main-colorful-hover);border: none;border: none !important;outline: none;}
+#pgsz-option .pgsz-button-small.alt:hover {background: var(--main-colorful-color);border: none;border: none !important;outline: none;}
 
 
 /* REMODAL */
