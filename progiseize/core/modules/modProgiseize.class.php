@@ -67,7 +67,7 @@ class modProgiseize extends DolibarrModules
         $this->editor_url = 'https://www.progiseize.fr';
         
         // Possible values for version are: 'development', 'experimental', 'dolibarr', 'dolibarr_deprecated' or a version string like 'x.y.z'
-        $this->version = '1.2.2';
+        $this->version = '1.3';
         // Key used in llx_const table to save module status enabled/disabled (where MYMODULE is value of property name of module in uppercase)
         $this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
         // Name of image file used for this module.
@@ -103,7 +103,7 @@ class modProgiseize extends DolibarrModules
         $this->dirs = array();
 
         // Config pages. Put here list of php page, stored into mymodule/admin directory, to use to setup module.
-        $this->config_page_url = "";
+        $this->config_page_url = "setup.php@progiseize";
 
         // Dependencies
         $this->hidden = false;          // A condition to hide module

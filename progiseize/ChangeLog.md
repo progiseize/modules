@@ -4,6 +4,10 @@
 [comment]: <> (librairie commune)
 
 ***
+### 1.3 (29/03/2022)
+* MAJ - Creation d'une classe pour les objets "Modules progiseize" et transfert de la librairie vers la classe
+* NEW - Ajout d'une fonction de nettoyage des variables inutilisées dans les modules
+
 ### 1.2.2 (28/03/2022)
 * MAJ - Ajout Lien Assistance
 

@@ -26,3 +26,18 @@ pgsz_alt_module_doc = Documentation
 pgsz_alt_module_setup = Configuration du module
 pgsz_alt_module_goto = Accéder au module
 pgsz_alt_module_inactive = Module désactivé
+
+#
+pgsz_error = Une erreur est survenue
+pgsz_success_cleanModulesVars = Opération terminée avec succès, %s variables supprimées
+
+# TABS
+pgsz_tabs_setup = Configuration
+
+# SETUP
+pgsz_setup_pageTitle = Actions module Progiseize
+pgsz_setup_optionTitle = Actions module Progiseize
+pgsz_setup_desc = Actions spécifiques aux modules de la famille Progiseize
+pgsz_setup_cleanModulesVars = Nettoyer les variables
+pgsz_setup_cleanModulesVars_desc = Vérifie les modules Progiseize installés et supprime les variables qui ne sont plus utilisées
+pgsz_setup_cleanModulesVars_button = Nettoyer

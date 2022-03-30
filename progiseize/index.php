@@ -22,9 +22,10 @@ $res=0;
 if (! $res && file_exists("../main.inc.php")): $res=@include '../main.inc.php'; endif;
 if (! $res && file_exists("../../main.inc.php")): $res=@include '../../main.inc.php'; endif;
 
+//require_once DOL_DOCUMENT_ROOT.'/admin/dolistore/class/dolistore.class.php';
 
-require_once DOL_DOCUMENT_ROOT.'/admin/dolistore/class/dolistore.class.php';
-require_once 'lib/progiseize.lib.php';
+dol_include_once('./progiseize/lib/progiseize.lib.php');
+dol_include_once('./progiseize/class/pgsz.class.php');
 
 // ON RECUPERE LA VERSION DE DOLIBARR
 $version = explode('.', DOL_VERSION);
@@ -40,8 +41,7 @@ if ($user->societe_id > 0): accessforbidden(); endif;
 /*******************************************************************
 * VARIABLES
 ********************************************************************/
-$list_modules = progiseize_listModulesInstance();
-
+$pgsz = new Pgsz($db);
 
 /*******************************************************************
 * ACTIONS
@@ -62,7 +62,7 @@ llxHeader('','Modules Progiseize',''); ?>
 	<h1><?php echo $langs->trans('pgsz_mainModulePage_h1'); ?></h1>
 
 	<div class="pgsz-flex-wrapper">
-	<?php foreach ($list_modules as $mod): ?>
+	<?php foreach ($pgsz->modules_local as $mod): ?>
 
 		<div class="pgsz-flex-4">
 			<div class="pgsz-mod-item">
@@ -98,14 +98,10 @@ llxHeader('','Modules Progiseize',''); ?>
 					<?php endif; ?>
 					</li>
 
-
 					<!-- <?php // LIEN VERS LA PAGE D'OPTION ?>
 					<?php if(!empty($mod->option_page)): $opt = explode('@', $mod->option_page);  ?>
 						<li><a href="<?php echo '../'.$opt[1].'/admin/'.$opt[0]; ?>" title="<?php print $langs->trans('pgsz_alt_module_setup'); ?>"><i class="fas fa-cog"></i></a></li>
 					<?php endif; ?> -->
-
-					
-					
 
 				</ul>
 			</div>
@@ -113,15 +109,6 @@ llxHeader('','Modules Progiseize',''); ?>
 
 	<?php endforeach; ?>
 
-	<!-- <div class="pgsz-flex-4">
-			<div class="pgsz-mod-item">
-				<div class="pgsz-mod-item-view view-modTicketPlus"><div class="pgsz-mod-item-statut statut-on"><?php echo $langs->trans('pgsz_mainModulePage_item_active'); ?></div></div>
-				<h3 class="pgsz-mod-item-title">TicketPlus <span>0.2</span></h3>
-				<p class="pgsz-mod-item-desc">Interface de tickets moderne</p>
-			</div>
-	</div> -->
-
-	<?php //var_dump($list_modules); ?>
 
 </div>
 
