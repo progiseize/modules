@@ -77,7 +77,7 @@ llxHeader('','Modules Progiseize',''); ?>
 						else: $module_label = $mod->label; endif; ?>
 					<?php echo $module_label; ?>						
 				</h3>
-				<p class="pgsz-mod-item-desc"><?php echo $mod->description; ?></p>
+				<p class="pgsz-mod-item-desc"><?php echo $langs->trans($mod->description); ?></p>
 				<ul class="pgsz-mod-item-infolist">
 
 					<li class="item-info-statut">Statut : 
